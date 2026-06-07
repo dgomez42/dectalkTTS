@@ -1,0 +1,14 @@
+If you hash libtts_us.so in src/lib/, you will find that THE HASH DOES NOT MATCH THAT OF THE ORIGINAL DECTALK DISTRIBUTION!
+
+"OH NOES, Qu1ck5h0t IS A SCARY HACKER OUT TO GET ME!!!!"
+-some idiot, definitely
+
+Rest assured, I am not pathetic and imbecilic enough to try to hack someone through a maliciously crafted library from the 80s. Honestly, I'd make more money flipping burgers at McDonalds. Anyway, here's what to do to get the EXACT SAME HASH
+
+1. Compile the source code (read and verify if needed) from https://github.com/dectalk/dectalk/releases/tag/2023-10-30 (or download the Ubuntu release)
+2. Extract /lib/libtts_us.so from the zip and hash it. You should get d56572e8f3207ad97bbf1b8fd6aca83947781de82a78d653b65f20fbc7272245
+3. Hash src/lib/libtts_us.so from the repo. You should get 45ca0793e6d4fa3550ac4c4e6bb6e26f36f1fe7a6ff82982a6f56073286d5092
+4. Now run libtts_patch.py (it is literally 11 lines, verify it yourself) with the original libtts_us.so in the same directory
+5. sha256sum libtts_us.so
+6. Do you feel embarassed for doubting me? You shouldn't because vigilance is good practise, but at least you now know it's safe!
+
